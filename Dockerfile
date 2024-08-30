@@ -1,6 +1,6 @@
 # https://catalog.ngc.nvidia.com/orgs/nvidia/containers/cuda
 #  - see: "LATEST CUDA XXXX"
-FROM nvidia/cuda:12.4.1-devel-ubuntu22.04
+FROM nvidia/cuda:12.1.1-devel-ubuntu22.04
 
 LABEL org.opencontainers.image.licenses=MIT
 LABEL org.opencontainers.image.description="Up-to-date CUDA container built to be a one-click runnable Hashtopolis agent to use on Vast.ai."
@@ -10,6 +10,7 @@ ENV DEBIAN_FRONTEND=NONINTERACTIVE
 
 RUN apt update && apt-get upgrade -y && apt install -y --no-install-recommends \
   zip \
+  unzip \
   git \
   python3 \
   python3-psutil \
@@ -18,6 +19,8 @@ RUN apt update && apt-get upgrade -y && apt install -y --no-install-recommends \
   pciutils \
   autossh \
   jq \
+  cuda \
+  ubuntu-drivers-common \
   curl && \
   rm -rf /var/lib/apt/lists/*
 
