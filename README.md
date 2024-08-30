@@ -56,13 +56,13 @@ TODO
 docker run --rm \
     -it \
     --platform linux/amd64 \
-    ghcr.io/thatonepasswordwas40passwords/vast-hashtopolis-runner
+    ghcr.io/lodos2005/hashtopolis-vast
 ```
 
 ### Via Vast.ai
 
 Edit `Image & Config` and use
-`ghcr.io/thatonepasswordwas40passwords/vast-hashtopolis-runner` as your custom
+`ghcr.io/lodos2005/hashtopolis-vast` as your custom
 image.
 
 Your onstart-script should be written out as so in vast.ai, not before replacing
@@ -145,7 +145,7 @@ be use multiple times.
 #### Vast.ai
 
 Edit `Image & Config` and use
-`ghcr.io/thatonepasswordwas40passwords/vast-hashtopolis-runner` as your custom
+`ghcr.io/lodos2005/hashtopolis-vast` as your custom
 image
 
 Your onstart-script should be written out as so in vast.ai, not before replacing
